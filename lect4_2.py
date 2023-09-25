@@ -172,15 +172,16 @@ print(res)
 my_list = ["apple","banana","cherry"]
 lres = rd.choice(my_list)
 print(lres)
-
+#0.0~1.0 까지 랜덤
 fres = rd.random()
 print(fres)
-
+#정규분포
 nvres = rd.normalvariate()
 print(nvres)
 """
+"""
 #모듈화
-import mod.str_util as mu
+import mod.utils as mu
 my_list = ['apple','banana','cherry']
 print(mu.rd_int(1,100))
 print(mu.rd_list(my_list))
@@ -188,7 +189,74 @@ print(mu.rd_rd())
 print(mu.rd_nmvar())
 
 #from datetime 
-# import datetime as dt #날짜와 시간 다루는 함수
-#import os #운영체제 상호작용 함수 제공
-#import os #인터프리터와 상호작용
+from datetime import datetime as dt
+#현재 시간 출력 
+print(dt.now())
+#특정 시간대의 현재 시간 출력
+from pytz import all_timezones
+tz = timezone('UTC')
+print("timezone : ",dt.now(tz))
 
+#문자열을 날짜로 변환
+dat_string = '2021-07-08'
+date_object = dt.strptime(date_string, '%Y-%m-%d')
+print(date_object)
+
+#날짜를 문자열로 변환
+date_object = dt.now()
+date_string = date_object.strftime('%Y-%m-%d')
+print(date_string)
+"""
+"""
+from datetime import datetime as dt
+import mod.str_util as mu
+
+dtnow = mu.get_dtnow()
+print(dtnow)
+
+ret = mu.cvt_time2str("023-09-25")
+print(ret)
+
+res = mu.cvt_str2time()
+print(res)
+"""
+"""
+#import os #운영체제 상호작용 함수 제공
+import os
+
+#현재 작업 디렉토리 출력
+print(os.getcwd())
+
+#디렉토리 변경
+os.chdir('../')
+
+#변경된 디렉토리 출력
+print(os.getcwd())
+
+#파일 목록 출력
+print(os.listdir())
+
+#디렉토리 삭제
+os.rmdir('new_directory')
+print(os.listdir)
+
+#디렉토리 생성
+os.mkdir('new_directory')
+print(os.listdir())
+"""
+#os 모듈 확인 
+import os
+import mod.utils as mu
+
+print(mu.get_curdir())
+
+pname = "python"
+mu.os_mkdir(pname)
+print(os.listdir())
+
+os.rmdir(pname)
+print(os.listdir())
+#import sys
+
+#print()
+#import os #인터프리터와 상호작용

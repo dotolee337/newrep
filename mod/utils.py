@@ -1,9 +1,3 @@
-
-def cutstr(st,wd,idx) :
-    tmp = st.split(wd)
-    res = tmp[idx]
-    return res
-
 import math
 def mt_sqrt(x):
     return math.sqrt(x)
@@ -45,3 +39,11 @@ def cvt_time2str(objtime) :
 def cvt_str2time(strftime) :
     obj = dt.now()
     return obj.strftime("%Y-%m-%d")
+
+import os
+def get_curdir():
+    return os.getcwd()
+
+def os_mkdir(pname) :
+    return os.mkdir(pname) 
+
