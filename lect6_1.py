@@ -126,7 +126,7 @@ f = open("temp.txt",'w')
 f.close()
 """
 #파일쓰기
-
+"""
 file = open("temp.txt","w")
 
 file.write("hello\n")
@@ -134,6 +134,61 @@ file.write("world\n")
 file.write("Hi!")
 
 file.close()
-# 파일 처리
+"""
+#0~100
+"""
+file = open("C:\\Users\\Catholic\\temp.txt","w")
+for i in range(100):
+   file.write(f"{i}\n")
+   
+file.close()
+"""
 
-## 파일 생성
+# 추가 쓰기
+"""
+file = open("C:\\Users\\Catholic\\temp.txt","a")
+file.write("hello\n")
+file.write("world")
+file.close
+"""
+#파일 읽기
+# 다른경로 파일 읽기
+"""
+file = open("temp.txt", "r")
+res = file.read()
+print(res)
+
+file.close()
+"""
+#readline
+"""
+file = open("C:\\Users\\Catholic\\temp.txt","r")
+
+for i in range(110):
+    res = file.readline()
+    print(res)
+    
+file.close
+"""
+#readlines(띄어쓰기없이 보기)
+"""
+file = open("C:\\Users\\Catholic\\temp.txt","r")
+res = file.readlines()
+print(res)
+file.close
+"""
+"""
+file = open("C:\\Users\\Catholic\\temp.txt", "r")
+line = file.readlines()
+for l in line :
+	print(l)
+
+file.close()
+"""
+#file object
+
+file = open("C:\\Users\\Catholic\\temp.txt", "r")
+for line in file:
+    print(line)
+
+file.close()
