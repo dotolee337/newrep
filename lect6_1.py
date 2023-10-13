@@ -186,9 +186,10 @@ for l in line :
 file.close()
 """
 #file object
-
+"""
 file = open("C:\\Users\\Catholic\\temp.txt", "r")
 for line in file:
     print(line)
 
 file.close()
+"""
