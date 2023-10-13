@@ -121,10 +121,19 @@ determine_winner(chnum)
 """
 #파일 생성
 #f = open("new.txt",'w')
-
+"""
 f = open("temp.txt",'w')
 f.close()
-
+"""
 #파일쓰기
 
-file = open("text")
+file = open("temp.txt","w")
+
+file.write("hello\n")
+file.write("world\n")
+file.write("Hi!")
+
+file.close()
+# 파일 처리
+
+## 파일 생성
