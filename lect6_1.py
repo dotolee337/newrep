@@ -55,7 +55,7 @@ for i in range(5):
     list = []
 """    
 #세로출력
-
+"""
 for i in range(5):
     num = i+1
     list = [i+1]
@@ -73,6 +73,7 @@ for i in range(1,6):
     print(list)
     list = []
 """
+"""
 #역순
 num = 26
 list = [ ]
@@ -83,3 +84,47 @@ for i in range(5):
     print(list)
     list = [ ]
 """
+#가위바위보
+"""
+import random
+
+def get_computer_choice():
+    choices = ['1','2','3']
+    return random.choice(choices) 
+
+def determine_winner(user_choice):
+    pcnum = get_computer_choice()
+    print(user_choice,pcnum)
+        
+    if user_choice == pcnum :
+       print("무승부")
+       return
+    elif (
+        (user_choice == '1' and pcnum == '3') or
+        (user_choice == '2' and pcnum == '1') or
+        (user_choice == '3' and pcnum == '2')
+    ):
+        print("승")
+        return
+    else:
+        print("패")
+        return
+         
+print("1: 가위")
+print("2: 바위")
+print("3: 보")
+print("1~3 숫자를 입력하세요!")
+chnum = input()
+#pcnum = get_computer_choice()
+
+determine_winner(chnum)
+"""
+#파일 생성
+#f = open("new.txt",'w')
+
+f = open("temp.txt",'w')
+f.close()
+
+#파일쓰기
+
+file = open("text")
